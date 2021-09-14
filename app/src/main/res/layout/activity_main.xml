@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/numberET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/editext_rounded"
+        android:gravity="start"
+        android:hint="@string/mobile_number"
+        android:imeOptions="actionNext"
+        android:maxLength="25"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_10"
+        android:textIsSelectable="true"
+        android:textSize="@dimen/standard_size_text" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/dateET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numberET"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/editext_rounded"
+        android:gravity="start"
+        android:inputType="number"
+        android:hint="@string/days"
+        android:imeOptions="actionDone"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_10"
+        android:textIsSelectable="true"
+        android:textSize="@dimen/standard_size_text" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/searchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dateET"
+        android:layout_centerInParent="true"
+        android:backgroundTint="@color/black"
+        android:text="Done"
+        android:textColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/resultTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchBtn"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dp_20"
+        android:gravity="center"
+        android:textColor="@color/black" />
+    <ProgressBar
+        android:id="@+id/pBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/resultTV"
+        android:layout_marginTop="@dimen/dp_20"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>
